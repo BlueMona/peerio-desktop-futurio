@@ -17,7 +17,7 @@
         "publish": {
             "provider": "github",
             "releaseType": "release"
-        },
+        }
     },
     "app/package.json": {
         "name": "futurio",
