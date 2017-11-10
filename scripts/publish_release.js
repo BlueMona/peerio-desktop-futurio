@@ -4,23 +4,7 @@ var GitHubApi = require('node-github')
 var github = new GitHubApi({
     // optional
     debug: true,
-    Promise: require('bluebird'),
-    timeout: 10000,
-    host: 'api.github.com',
-    pathPrefix: '',
-    protocol: 'https',
-    port: 9898,
-    //proxy: '',
-    //ca: '',
-    headers: {
-        'accept': 'application/vnd.github.peerio',
-        'cookie': 'peeriodeploy',
-        'user-agent': 'peerio-deploy'
-    },
-    requestMedia: 'application/vnd.github.peerio',
-    followRedirects: false, // default: true; there's currently an issue with non-get redirects, so allow disabling follow-redirects
-    rejectUnauthorized: false, // default: true
-    family: 6
+    version: '3.0.0'
 })
 
 github.authenticate({
@@ -29,6 +13,7 @@ github.authenticate({
 });
 
 const version = JSON.parse(fs.readFileSync('../peerio-desktop/package.json', 'utf-8')).version;
+console.log('VERSION', version);
 return github.repos.getReleaseByTag({ owner: 'PeerioTechnologies', repo: 'peerio-desktop-futurio', tag: `v${version}` })
     .then(res => {
         const releaseId = res.data.id;
