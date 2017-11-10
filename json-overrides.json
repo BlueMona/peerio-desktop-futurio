@@ -13,10 +13,6 @@
             "win": {
                 "publisherName": "Peerio Technologies Inc."
             }
-        },
-        "publish": {
-            "provider": "github",
-            "releaseType": "release"
         }
     },
     "app/package.json": {
