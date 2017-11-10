@@ -4,6 +4,7 @@ machine:
 dependencies:
   pre:
     - ./scripts/prepare.sh
+    - ./scripts/create-netrc.sh
   cache_directories:
     - "/usr/local/Cellar"
 compile:
