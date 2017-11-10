@@ -9,6 +9,7 @@ var github = new GitHubApi({
 
 github.authenticate({
     type: 'token',
+    username: process.env.GH_USER,
     token: process.env.GH_TOKEN
 });
 
