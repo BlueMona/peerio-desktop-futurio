@@ -5,5 +5,5 @@ cd peerio-desktop
 
 cd ..
 cd peerio-desktop-futurio
-npm i node-github bluebird
+npm i github bluebird
 node ./scripts/publish_release.js

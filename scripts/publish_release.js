@@ -1,10 +1,10 @@
 const fs = require('fs');
-var GitHubApi = require('node-github')
+var GitHubApi = require('github')
 
 var github = new GitHubApi({
     // optional
     debug: true,
-    version: '3.0.0'
+    Promise: require('bluebird')
 })
 
 github.authenticate({
