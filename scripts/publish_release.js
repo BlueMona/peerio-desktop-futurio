@@ -1,5 +1,5 @@
 const fs = require('fs');
-var GitHubApi = require('github')
+var GitHubApi = require('node-github')
 
 var github = new GitHubApi({
     // optional
