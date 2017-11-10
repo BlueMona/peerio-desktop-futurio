@@ -15,14 +15,17 @@ github.authenticate({
 
 const version = JSON.parse(fs.readFileSync('../peerio-desktop/package.json', 'utf-8')).version;
 console.log('VERSION', version);
-return github.repos.getReleaseByTag({ owner: 'PeerioTechnologies', repo: 'peerio-desktop-futurio', tag: `v${version}` })
+
+return github.repos.getReleases({ owner: 'PeerioTechnologies', repo: 'peerio-desktop-futurio' })
     .then(res => {
-        const releaseId = res.data.id;
-        if (!releaseId) throw new Error('Release not found.');
+        const release = res.data[0];
+        if (!release) throw new Error('Release not found.');
+        if (release.tag_name !== `v${version}`) throw new Error(`Womp, tag name mismatch, release: ${release.tag_name}, our: v${version}`);
         return github.repos.editRelease({
             owner: 'PeerioTechnologies',
             repo: 'peerio-desktop-futurio',
-            id: releaseId,
+            tag_name: release.tag_name,
+            id: release.id,
             draft: false,
             prerelease: false
         });
