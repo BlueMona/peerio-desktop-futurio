@@ -25,6 +25,10 @@
         },
         "author": "Technologies Peerio Inc. <support@peerio.com>",
         "updater": {
+            "nightly": true,
+            "publicKeys": [
+                "RWSphsMQjlB23ku5WUu9gvRmFPg6uQGQprtCRBzhROs+xKJQHdIuH4m5"
+            ],
             "manifests": [
                 "github:PeerioTechnologies/peerio-desktop-futurio"
             ]
