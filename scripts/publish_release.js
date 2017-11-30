@@ -13,14 +13,14 @@ github.authenticate({
     token: process.env.GH_TOKEN
 });
 
-const version = JSON.parse(fs.readFileSync('../peerio-desktop/package.json', 'utf-8')).version;
-console.log('VERSION', version);
+//const version = JSON.parse(fs.readFileSync('../peerio-desktop/package.json', 'utf-8')).version;
+//console.log('VERSION', version);
 
 return github.repos.getReleases({ owner: 'PeerioTechnologies', repo: 'peerio-desktop-futurio' })
     .then(res => {
         const release = res.data[0];
-        if (!release) throw new Error('Release not found.');
-        if (release.tag_name !== `v${version}`) throw new Error(`Womp, tag name mismatch, release: ${release.tag_name}, our: v${version}`);
+        //if (!release) throw new Error('Release not found.');
+        //if (release.tag_name !== `v${version}`) throw new Error(`Womp, tag name mismatch, release: ${release.tag_name}, our: v${version}`);
         return github.repos.editRelease({
             owner: 'PeerioTechnologies',
             repo: 'peerio-desktop-futurio',
