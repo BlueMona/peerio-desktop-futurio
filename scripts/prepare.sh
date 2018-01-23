@@ -9,3 +9,6 @@ brew link gnu-tar
 brew link libicns
 brew link graphicsmagick
 brew link xz
+
+# macOS dep for building AppImage on < 10.13
+brew install gettext
