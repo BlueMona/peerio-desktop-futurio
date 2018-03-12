@@ -1,5 +1,5 @@
 const fs = require('fs');
-var GitHubApi = require('github')
+var GitHubApi = require('@octokit/rest')
 
 var github = new GitHubApi({
     // optional

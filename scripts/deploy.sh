@@ -6,5 +6,5 @@ cd peerio-desktop
 
 cd ..
 cd peerio-desktop-futurio
-npm i github bluebird
+npm i @octokit/rest bluebird
 node ./scripts/publish_release.js
