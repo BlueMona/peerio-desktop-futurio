@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+
+# temporary
+ls -l /usr/local/opt/ || true
+ls -l /usr/local/opt/gettext || true
+ls -l /usr/local/opt/gettext/lib/ || true
+
 cd ..
 cd peerio-desktop
 
