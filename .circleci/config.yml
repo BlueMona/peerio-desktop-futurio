@@ -8,9 +8,15 @@ jobs:
       xcode: "9.0.1"
     steps:
       - checkout
-      - run: |
-          ./scripts/prepare.sh
-          ./scripts/deploy.sh
+      - restore_cache:
+          key: dependency-cache
+      - run: ./scripts/prepare.sh
+        no_output_timout: 1h
+      - save_cache:
+          key: dependency-cache
+          paths:
+            - /usr/local/Cellar
+      - run: ./scripts/deploy.sh
 
 workflows:
   version: 2
