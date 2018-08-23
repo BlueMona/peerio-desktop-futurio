@@ -7,8 +7,8 @@ jobs:
     macos:
       xcode: "9.0.1"
     steps:
-      - name: commands
-        command: |
+      - checkout
+      - run: |
           ./scripts/prepare.sh
           ./scripts/deploy.sh
 
