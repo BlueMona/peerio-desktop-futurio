@@ -10,13 +10,15 @@ jobs:
       - checkout
       - restore_cache:
           key: dependency-cache
-      - run: ./scripts/prepare.sh
-        no_output_timout: 1h
+      - run:
+          command: ./scripts/prepare.sh
+          no_output_timout: 1h
       - save_cache:
           key: dependency-cache
           paths:
             - /usr/local/Cellar
-      - run: ./scripts/deploy.sh
+      - run:
+          command: ./scripts/deploy.sh
 
 workflows:
   version: 2
