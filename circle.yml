@@ -8,7 +8,8 @@ dependencies:
     - "/usr/local/Cellar"
 compile:
   override:
-    - ./scripts/deploy.sh
+    command: ./scripts/deploy.sh
+    no_output_timeout: 30m
 test:
   override:
     - node -v
