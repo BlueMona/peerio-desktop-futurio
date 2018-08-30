@@ -3,7 +3,8 @@ machine:
     version: 9.0.1
 dependencies:
   pre:
-    - ./scripts/prepare.sh
+    command: ./scripts/deploy.sh
+    no_output_timeout: 30m
   cache_directories:
     - "/usr/local/Cellar"
 compile:
