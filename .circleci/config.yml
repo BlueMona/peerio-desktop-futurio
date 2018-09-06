@@ -1,0 +1,20 @@
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+
+version: 2
+jobs:
+  build:
+    macos:
+      xcode: "10.0"
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          key: brew_cellar
+      - run:
+          name: brew
+          command: ./scripts/prepare.sh
+      - save_cache:
+          key: brew_cellar
+          paths:
+            - /usr/local/Cellar
+      - run: ./scripts/deploy.sh
