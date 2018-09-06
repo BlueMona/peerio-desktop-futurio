@@ -13,8 +13,13 @@ jobs:
       - run:
           name: brew
           command: ./scripts/prepare.sh
+          no_output_timeout: 1.5h
       - save_cache:
           key: brew_cellar
           paths:
             - /usr/local/Cellar
-      - run: ./scripts/deploy.sh
+      - run:
+          name: deploy
+          command: ./scripts/deploy.sh
+          no_output_timeout: 1.5h
+
