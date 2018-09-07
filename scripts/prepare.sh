@@ -7,4 +7,5 @@ git checkout dev
 brew link graphicsmagick
 
 # macOS dep for building AppImage on < 10.13
-brew link gettext --force
+brew install gettext
+# brew link gettext --force
