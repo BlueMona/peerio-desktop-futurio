@@ -5,7 +5,7 @@ jobs:
   build:
     macos:
       xcode: "9.0"
-    working_directory: ~/repo
+    working_directory: ~/peerio-desktop-futurio
     steps:
       - checkout
       - restore_cache:
