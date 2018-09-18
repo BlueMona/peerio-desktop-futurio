@@ -13,17 +13,7 @@
             "win": {
                 "publisherName": "Peerio Technologies Inc."
             }
-        }
-    },
-    "app/package.json": {
-        "name": "futurio",
-        "productName": "Future Peerio",
-        "description": "Future Peerio",
-        "repository": {
-            "type": "git",
-            "url": "git+https://github.com/PeerioTechnologies/peerio-desktop-futurio.git"
         },
-        "author": "Technologies Peerio Inc. <support@peerio.com>",
         "updater": {
             "nightly": true,
             "publicKeys": [
