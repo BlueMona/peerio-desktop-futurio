@@ -1,6 +1,7 @@
 {
     "package.json": {
         "name": "futurio",
+        "productName": "Future Peerio",
         "description": "Future Peerio",
         "repository": {
             "type": "git",
