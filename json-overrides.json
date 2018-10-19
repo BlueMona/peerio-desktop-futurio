@@ -27,7 +27,7 @@
         "peerio": {
             "appId": "com.peerio.futurio",
             "keychainService": "PeerioMessengerFuturio",
-            "socketServerUrl": "wss://hocuspocus.peerio.com",
+            "socketServerUrl": "wss://treetrunks.peerio.com",
             "usePeerioUpdater": true
         }
     }
