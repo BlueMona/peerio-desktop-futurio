@@ -16,7 +16,7 @@ github.authenticate({
 //const version = JSON.parse(fs.readFileSync('../peerio-desktop/package.json', 'utf-8')).version;
 //console.log('VERSION', version);
 
-return github.repos.getReleases({ owner: 'PeerioTechnologies', repo: 'peerio-desktop-futurio' })
+return github.repos.listReleases({ owner: 'PeerioTechnologies', repo: 'peerio-desktop-futurio' })
     .then(res => {
         const release = res.data[0];
         //if (!release) throw new Error('Release not found.');
